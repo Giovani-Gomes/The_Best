@@ -5,6 +5,8 @@ import com.project.projectTheBest.services.JogadorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api")
 public class JogadorController {
@@ -28,7 +30,7 @@ public class JogadorController {
     }
 
     @GetMapping("/listar")
-    public String listaCandidatos() {
+    public List<Jogador> listaCandidatos() {
         return jogadorService.listarJogadores();
     }
 }

@@ -65,4 +65,16 @@ public class Jogador {
     public void setQuantidadeVotos(int quantidadeVotos) {
         this.quantidadeVotos = quantidadeVotos;
     }
+
+    @Override
+    public String toString() {
+        return "Jogador{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", clube='" + clube + '\'' +
+                ", nacionalidade='" + nacionalidade + '\'' +
+                ", quantidadeVotos=" + quantidadeVotos +
+                '}';
+    }
 }

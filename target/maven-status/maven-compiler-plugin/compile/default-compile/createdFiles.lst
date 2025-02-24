@@ -1,0 +1,8 @@
+com/project/projectTheBest/services/JogadorService.class
+com/project/projectTheBest/repository/JogadorRepository.class
+com/project/projectTheBest/controller/JogadorController.class
+com/project/projectTheBest/services/VotoService.class
+com/project/projectTheBest/controller/VotoController.class
+com/project/projectTheBest/ApiTheBestApplication.class
+com/project/projectTheBest/model/Jogador.class
+com/project/projectTheBest/model/Voto.class

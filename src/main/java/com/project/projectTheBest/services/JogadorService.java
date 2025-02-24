@@ -31,8 +31,6 @@ public class JogadorService {
     }
 
 
-
-
     public String atualizarJogador(Long id, Jogador jogador) {
 
         Optional<Jogador> jogadorExistente = jogadorRepository.findById(id);
@@ -57,11 +55,7 @@ public class JogadorService {
         return false;
     }
 
-    public String listarJogadores() {
-        List<Jogador> jogadores = jogadorRepository.findAll();
-        if (jogadores.isEmpty()) {
-            return "Nenhum jogador cadastrado.";
-        }
-        return jogadores.toString();
+    public List<Jogador> listarJogadores() {
+        return jogadorRepository.findAll();
     }
 }

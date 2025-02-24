@@ -1,0 +1,8 @@
+/media/giovani/B06ED6D06ED68F0A/Projetos/The_Best/src/main/java/com/project/projectTheBest/ApiTheBestApplication.java
+/media/giovani/B06ED6D06ED68F0A/Projetos/The_Best/src/main/java/com/project/projectTheBest/controller/JogadorController.java
+/media/giovani/B06ED6D06ED68F0A/Projetos/The_Best/src/main/java/com/project/projectTheBest/controller/VotoController.java
+/media/giovani/B06ED6D06ED68F0A/Projetos/The_Best/src/main/java/com/project/projectTheBest/model/Jogador.java
+/media/giovani/B06ED6D06ED68F0A/Projetos/The_Best/src/main/java/com/project/projectTheBest/model/Voto.java
+/media/giovani/B06ED6D06ED68F0A/Projetos/The_Best/src/main/java/com/project/projectTheBest/repository/JogadorRepository.java
+/media/giovani/B06ED6D06ED68F0A/Projetos/The_Best/src/main/java/com/project/projectTheBest/services/JogadorService.java
+/media/giovani/B06ED6D06ED68F0A/Projetos/The_Best/src/main/java/com/project/projectTheBest/services/VotoService.java
