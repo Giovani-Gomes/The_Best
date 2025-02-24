@@ -1,4 +1,8 @@
-# Prêmio The Best
+# API - Prêmio The Best
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Giovani-Gomes/The_Best)
+
+
 
 
 <p>Simule, por meio de uma API, a Eleição “The best” da FIFA. A eleição simulada deve ocorrer
