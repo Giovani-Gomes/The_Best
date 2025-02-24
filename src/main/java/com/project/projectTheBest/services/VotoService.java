@@ -20,23 +20,26 @@ public class VotoService {
             votosPorGrupo.put(grupo, new HashMap<>());
         }
 
-        int pontos = 5;
+        int pontos = 5; // Primeira posição
         for (int i = 0; i < idsJogadores.length; i++) {
             Long idJogador = idsJogadores[i];
             Jogador jogador = jogadorRepository.findById(idJogador).orElse(null);
             if (jogador != null) {
-
+                // Atualiza a quantidade de votos do jogador
                 jogador.setQuantidadeVotos(jogador.getQuantidadeVotos() + pontos);
                 jogadorRepository.save(jogador);
 
-
+                // Registra votos por grupo
                 votosPorGrupo.get(grupo).put(idJogador, votosPorGrupo.get(grupo).getOrDefault(idJogador, 0) + pontos);
 
-                pontos = (i == 0) ? 3 : 1;
+                pontos = (i == 0) ? 3 : 1; // Ajuste para as outras posições
             }
         }
         return "Voto registrado com sucesso!";
     }
+
+
+
 
     public Map<Long, Integer> getTopJogadoresPorGrupo(String grupo) {
         return votosPorGrupo.get(grupo);

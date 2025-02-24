@@ -15,13 +15,26 @@ public class JogadorService {
     private JogadorRepository jogadorRepository;
 
 
-    public Jogador cadastrarJogador(Jogador jogador) {
-        jogador.setQuantidadeVotos(0); // Iniciar com 0 votos
-        return jogadorRepository.save(jogador);
+    public String cadastrarJogador(Jogador jogador) {
+        long quantidadeJogadores = jogadorRepository.count();
+
+        if (quantidadeJogadores == 10) {
+            return "Já existem 10 jogadores cadastrados. Não é possível cadastrar mais.";
+        }
+
+
+        jogador.setQuantidadeVotos(0);
+
+        jogadorRepository.save(jogador);
+
+        return "Jogador cadastrado com sucesso!";
     }
 
 
-    public Jogador atualizarJogador(Long id, Jogador jogador) {
+
+
+    public String atualizarJogador(Long id, Jogador jogador) {
+
         Optional<Jogador> jogadorExistente = jogadorRepository.findById(id);
         if (jogadorExistente.isPresent()) {
             Jogador updatedJogador = jogadorExistente.get();
@@ -29,9 +42,10 @@ public class JogadorService {
             updatedJogador.setIdade(jogador.getIdade());
             updatedJogador.setClube(jogador.getClube());
             updatedJogador.setNacionalidade(jogador.getNacionalidade());
-            return jogadorRepository.save(updatedJogador);
+            jogadorRepository.save(updatedJogador);
+            return "Jogador atualizado com sucesso!";
         }
-        return null;
+        return "Jogador não encontrado.";
     }
 
     public boolean excluirJogador(Long id) {
@@ -43,7 +57,11 @@ public class JogadorService {
         return false;
     }
 
-    public List<Jogador> listarJogadores() {
-        return jogadorRepository.findAll();
+    public String listarJogadores() {
+        List<Jogador> jogadores = jogadorRepository.findAll();
+        if (jogadores.isEmpty()) {
+            return "Nenhum jogador cadastrado.";
+        }
+        return jogadores.toString();
     }
 }

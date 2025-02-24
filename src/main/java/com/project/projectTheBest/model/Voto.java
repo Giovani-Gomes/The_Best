@@ -1,12 +1,10 @@
 package com.project.projectTheBest.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 
-@Entity
+
 public class Voto {
-    @Id
+
     private Long id;
     private String grupo;
     private Long idVotante;
